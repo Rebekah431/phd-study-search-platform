@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Add New Study</h2>
+
+<form method="post">
+    <input type="text" name="title" placeholder="Title"><br><br>
+    <input type="text" name="university" placeholder="University"><br><br>
+    <input type="text" name="subject" placeholder="Subject"><br><br>
+    <input type="text" name="location" placeholder="Location"><br><br>
+    <input type="text" name="funding" placeholder="Funding"><br><br>
+    <button type="submit">Add Study</button>
+</form>
+
+{% endblock %}
