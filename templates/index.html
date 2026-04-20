@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Search Studies</h2>
+
+<form method="get">
+    <input type="text" name="query" placeholder="Search by title or university">
+    <select name="subject">
+        <option value="">All Subjects</option>
+        <option>Computer Science</option>
+        <option>Engineering</option>
+        <option>Business</option>
+    </select>
+    <button type="submit">Search</button>
+</form>
+
+<h2>Available Studies</h2>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>University</th>
+        <th>Subject</th>
+        <th>Location</th>
+        <th>Funding</th>
+    </tr>
+
+    {% for study in studies %}
+    <tr>
+        <td>{{ study.title }}</td>
+        <td>{{ study.university }}</td>
+        <td>{{ study.subject }}</td>
+        <td>{{ study.location }}</td>
+        <td>{{ study.funding }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
